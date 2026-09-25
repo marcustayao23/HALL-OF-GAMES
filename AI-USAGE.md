@@ -45,47 +45,30 @@ it in your own words.
 
 
 ### Written by @marcoustayao23
-
-- **File:**
-- **Commit:**
-- **What it does and why it is built this way:**
-
 ### The AI-written part I understand best
 
 - **File:**
 - **Commit:**
 - **What it does and why we kept it:**
+  
 
 ### Written by @karlllz
-
-- **File:**
-- **Commit:**
-- **What it does and why it is built this way:**
-
 ### The AI-written part I understand best
 
 - **File:**
 - **Commit:**
 - **What it does and why we kept it:**
+  
 
 ### Written by @Amber55666
-
-- **File:**
-- **Commit:**
-- **What it does and why it is built this way:**
-
 ### The AI-written part I understand best
 
 - **File:**
 - **Commit:**
 - **What it does and why we kept it:**
+- 
 
 ### Written by  @blaizemt25
-
-- **File:**
-- **Commit:**
-- **What it does and why it is built this way:**
-
 ### The AI-written part I understand best
 
 - **File:**
