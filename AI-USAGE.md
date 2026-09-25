@@ -11,12 +11,14 @@ looks exactly like what it is.
 
 At least six entries. One per real use. Every entry needs a commit link.
 
-### YYYY-MM-DD - short title
 
-- **Tool:**
-- **What I asked for:**
-- **What it gave back:**
+### 2026-08-25  Turning Wireframe Into Website
+
+- **Tool:**Gemini Ai
+- **What I asked for:**Convert Hall of Games Wireframe into Website
+- **What it gave back:** A polished, modern-looking website layout with clean HTML and CSS that looked like a finished, production-ready web page at first glance
 - **What I kept, what I changed, and why:**
+ As of  Week 1, we did not keep any of the AI-generated website code because the result was too far from our desired design and concept. We revised the wireframe and rebuilt the website from scratch, with the current HTML and CSS being written and developed by our group based on our own design and plans. Since the project is still in its early stage, JavaScript functionality has not yet been implemented.
 - **Commit:** https://github.com/YOUR-USERNAME/YOUR-REPO/commit/SHA
 
 ## 2. Where the AI got it wrong
@@ -24,11 +26,13 @@ At least six entries. One per real use. Every entry needs a commit link.
 Three cases. Be specific. If you write that the AI was never wrong, this section
 scores zero.
 
-### Case 1 - short title
+### Case 1 - Making the Wireframe and Interactive Website
 
-- **What it gave me:**
-- **What was wrong with it:**
-- **What I did instead:**
+- **What it gave me:** A polished, modern-looking website layout with clean HTML and CSS that looked like a finished, production-ready web page at first glance
+
+- **What was wrong with it:** It completely missed the mark on the actual wireframe design and core concept, giving a layout far from the intended idea. Furthermore, it lacked any meaningful JavaScript functionality, leaving the site completely static and devoid of interactive features.
+
+- **What I did instead:** We redid our wireframe to make it more manageable for AI to code in the future. For now, the current website, as of Week 1, does not contain any AI-generated code because the functionalities have not yet been included and the plans are still being organized and finalized.
 - **Commit:** https://github.com/YOUR-USERNAME/YOUR-REPO/commit/SHA
 
 ## 3. Who wrote what
@@ -39,7 +43,44 @@ it in your own words.
 > Group projects: give each member their own heading below, and use your GitHub
 > handle as the heading. You are graded on your own section.
 
-### Written by me
+
+### Written by @marcoustayao23
+
+- **File:**
+- **Commit:**
+- **What it does and why it is built this way:**
+
+### The AI-written part I understand best
+
+- **File:**
+- **Commit:**
+- **What it does and why we kept it:**
+
+### Written by @karlllz
+
+- **File:**
+- **Commit:**
+- **What it does and why it is built this way:**
+
+### The AI-written part I understand best
+
+- **File:**
+- **Commit:**
+- **What it does and why we kept it:**
+
+### Written by @Amber55666
+
+- **File:**
+- **Commit:**
+- **What it does and why it is built this way:**
+
+### The AI-written part I understand best
+
+- **File:**
+- **Commit:**
+- **What it does and why we kept it:**
+
+### Written by  @blaizemt25
 
 - **File:**
 - **Commit:**
