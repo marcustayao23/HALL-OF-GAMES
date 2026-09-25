@@ -19,7 +19,7 @@ At least six entries. One per real use. Every entry needs a commit link.
 - **What it gave back:** A polished, modern-looking website layout with clean HTML and CSS that looked like a finished, production-ready web page at first glance
 - **What I kept, what I changed, and why:**
  As of  Week 1, we did not keep any of the AI-generated website code because the result was too far from our desired design and concept. We revised the wireframe and rebuilt the website from scratch, with the current HTML and CSS being written and developed by our group based on our own design and plans. Since the project is still in its early stage, JavaScript functionality has not yet been implemented.
-- **Commit:** https://github.com/YOUR-USERNAME/YOUR-REPO/commit/SHA
+- **Commit:** https://github.com/marcustayao23/HALL-OF-GAMES/commit/8be09c3bd8d51d553f021c227b274ac17b8b2c04
 
 ## 2. Where the AI got it wrong
 
