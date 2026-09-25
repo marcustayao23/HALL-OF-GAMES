@@ -33,7 +33,7 @@ scores zero.
 - **What was wrong with it:** It completely missed the mark on the actual wireframe design and core concept, giving a layout far from the intended idea. Furthermore, it lacked any meaningful JavaScript functionality, leaving the site completely static and devoid of interactive features.
 
 - **What I did instead:** We redid our wireframe to make it more manageable for AI to code in the future. For now, the current website, as of Week 1, does not contain any AI-generated code because the functionalities have not yet been included and the plans are still being organized and finalized.
-- **Commit:** https://github.com/YOUR-USERNAME/YOUR-REPO/commit/SHA
+- **Commit:** https://github.com/marcustayao23/HALL-OF-GAMES/commit/8be09c3bd8d51d553f021c227b274ac17b8b2c04
 
 ## 3. Who wrote what
 
