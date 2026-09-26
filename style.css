@@ -7,7 +7,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #4b5563;
+  background-color: #5b4061;
   color: #ffffff;
   display: flex;         /* Use flexbox to control layout height */
   flex-direction: column; /* Stack header, main, and footer vertically */
@@ -24,7 +24,7 @@ body {
   z-index: 1000;
   display: flex;
   justify-content: space-between;
-  background-color: #1e293b;
+  background-color: #2a0e33;
   padding: 1.2rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -65,7 +65,7 @@ main h2 {
 footer {
   text-align: center;
   padding: 1.8rem;
-  background-color: #1e293b;
+  background-color: #2a0e33;
 }
 
 .footer-links {
@@ -123,7 +123,7 @@ footer {
   display: block;
 }
 
-/* --- Dropdown Layout Fixes --- */
+/*amber/
 
 /* 1. Aligns Home, Browse, and Categories vertically in the navbar */
 .nav-left {
@@ -183,4 +183,104 @@ footer {
 /* THE MAGIC: Reveals the dropdown content only when hovering over Categories */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+
+/* KAAAAAAAAAAAAAAAARL
+
+/* Gallery Container */
+.gallery-section {
+  text-align: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+/* 3D Carousel Container */
+.card-carousel {
+  display: flex;
+  align-items: center;
+  perspective: 1000px;
+  width: max-content;
+  padding: 0; /* REMOVED padding: 0 50vw to fix the giant empty left space */
+}
+/* Individual Card Styling */
+.card {
+  position: relative;
+  width: 260px;
+  height: 440px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background-color: #2a3447;
+  border: 2px dashed #4b5563;
+  overflow: hidden;
+  margin: 0 -25px; /* Overlap cards side-by-side */
+  cursor: pointer;
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Placeholder box before you insert images */
+.card-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-weight: bold;
+}
+
+/* Image behavior inside card */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hide image tag if src is broken/empty so placeholder shows */
+.card img:not([src]), 
+.card img[src=""],
+.card img[src*="your-image"] {
+  display: none;
+}
+/* Hover & Active State Interaction */
+.card:hover,
+.card.active {
+  transform: scale(1.18) translateY(-15px);
+  opacity: 1;
+  z-index: 10;
+  border-color: transparent;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+main {
+  flex: 1;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  color: #ffffff;
+  overflow-x: hidden; /* Prevents unwanted horizontal body scrollbar */
+}
+
+.carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 3rem 0;
+  /* Hide scrollbars */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
 }
