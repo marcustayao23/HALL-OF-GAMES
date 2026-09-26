@@ -9,10 +9,14 @@ body {
   line-height: 1.6;
   background-color: #4b5563;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: flex;         /* Use flexbox to control layout height */
+  flex-direction: column; /* Stack header, main, and footer vertically */
+  min-height: 100vh;     /* Forces the page to take up 100% of the screen height */
+  margin: 0;
+  padding: 0;
 }
+
+
 
 .navbar {
   position: sticky;
@@ -81,4 +85,102 @@ footer {
 
 .footer-links a:hover {
   color: #38bdf8;
+}
+
+/* --- Dropdown Hover Menu Code --- */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1e293b;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: #334155; 
+  color: #38bdf8;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- Dropdown Layout Fixes --- */
+
+/* 1. Aligns Home, Browse, and Categories vertically in the navbar */
+.nav-left {
+  align-items: center; 
+}
+
+/* 2. Forces the Categories link inside the dropdown to look like your other navbar links */
+.dropdown .dropbtn {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem; 
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+/* 3. Turns Categories light blue when hovered */
+.dropdown:hover .dropbtn {
+  color: #38bdf8;
+}
+
+/* --- The Dropdown Functionality --- */
+
+/* Keeps the dropdown box positioned relatively so the sub-menu aligns under it */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hides the "Games" box by default and positions it below Categories */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1e293b; /* Matches your dark navbar background */
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  z-index: 1001;
+}
+
+/* Styles the individual "Games" link inside the box */
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+/* Adds a hover effect inside the dropdown menu */
+.dropdown-content a:hover {
+  background-color: #334155; 
+  color: #38bdf8;
+}
+
+/* THE MAGIC: Reveals the dropdown content only when hovering over Categories */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
