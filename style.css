@@ -29,6 +29,39 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.game-search {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 2rem;
+  z-index: 1001;
+  display: grid;
+  gap: 0.4rem;
+  width: min(320px, calc(100vw - 2rem));
+  padding: 0.85rem;
+  border: 1px solid #a78bfa;
+  border-radius: 6px;
+  background: #2a0e33;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.game-search label {
+  font-weight: bold;
+}
+
+.game-search input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 2px solid #a78bfa;
+  border-radius: 4px;
+  color: #1f2937;
+  font: inherit;
+}
+
+.game-search input:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 2px;
+}
+
 .nav-left {
   display: flex;
   gap: 2rem;
@@ -200,6 +233,10 @@ footer {
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #ffffff;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 /* 3D Carousel Container */

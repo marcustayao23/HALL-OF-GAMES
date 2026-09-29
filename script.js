@@ -2,6 +2,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Final project page loaded.");
 
+  const searchLink = document.querySelector('.nav-right a[href="#search"]');
+  const searchPanel = document.getElementById('searchPanel');
+  const searchInput = document.getElementById('search');
+
+  if (searchLink && searchPanel && searchInput) {
+    searchLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      const isOpen = !searchPanel.hidden;
+      searchPanel.hidden = isOpen;
+      searchLink.setAttribute('aria-expanded', String(!isOpen));
+
+      if (isOpen) {
+        searchLink.focus();
+      } else {
+        searchInput.focus();
+      }
+    });
+  }
+
   const container = document.getElementById('carouselContainer');
   const carousel = document.getElementById('cardCarousel');
 
