@@ -34,7 +34,7 @@ At least six entries. One per real use. Every entry needs a commit link.
 
 ### 2026-09-29 — Updating the Project Documentation
 
-- **Tool:**Gemini Ai
+![Static Badge](https://img.shields.io/badge/Gemini-blueviolet?style=flat&cacheSeconds=https%3A%2F%2Fgemini.google.com%2Fapp%2F512599d0fcb004ed%3Fis_sa%3D1%26is_sa%3D1%26android-min-version%3D301356232%26ios-min-version%3D322.0%26campaign_id%3Dbkws%26utm_source%3Dsem%26utm_medium%3Dpaid-media%26utm_campaign%3Dbkws%26pt%3D9008%26mt%3D8%26ct%3Dp-growth-sem-bkws%26gclsrc%3Daw.ds%26gad_source%3D1%26gad_campaignid%3D22427904477%26gbraid%3D0AAAAApk5Bhm5vaCfOkBBIKFkIcaVpNl3h%26gclid%3DEAIaIQobChMI39ng2sGglwMVwZe5BR02HgKLEAAYASAAEgIOVfD_BwE&link=https%3A%2F%2Fgemini.google.com%2Fapp%2F512599d0fcb004ed%3Fis_sa%3D1%26is_sa%3D1%26android-min-version%3D301356232%26ios-min-version%3D322.0%26campaign_id%3Dbkws%26utm_source%3Dsem%26utm_medium%3Dpaid-media%26utm_campaign%3Dbkws%26pt%3D9008%26mt%3D8%26ct%3Dp-growth-sem-bkws%26gclsrc%3Daw.ds%26gad_source%3D1%26gad_campaignid%3D22427904477%26gbraid%3D0AAAAApk5Bhm5vaCfOkBBIKFkIcaVpNl3h%26gclid%3DEAIaIQobChMI39ng2sGglwMVwZe5BR02HgKLEAAYASAAEgIOVfD_BwE)
 - **What I asked for:**Help organize and explain the Week 2 changes in the project documentation.
 - **What it gave back:** AI helped structure the documentation for the website's current features, project structure, screenshots, known issues, and next steps.
 - **What I kept, what I changed, and why:** We used the suggestions as a starting point and changed the information to match the actual state of our project. We made sure the documentation did not describe unfinished features as completed.
