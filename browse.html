@@ -24,7 +24,12 @@
         </div>
       </nav>
       <div class="nav-right">
-        <a href="#search">Search</a>
+        <a href="#search" aria-controls="searchPanel" aria-expanded="false">Search</a>
+      </div>
+
+      <div class="game-search" id="searchPanel" hidden>
+        <label for="search">Search games</label>
+        <input id="search" type="search" placeholder="Search games..." autocomplete="off" />
       </div>
     </header> 
 

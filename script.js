@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Final project page loaded.");
 
-
+  // Search panel
   const searchLink = document.querySelector('.nav-right a[href="#search"]');
   const searchPanel = document.getElementById('searchPanel');
   const searchInput = document.getElementById('search');
@@ -22,35 +22,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
+  // Game carousel
   const container = document.getElementById('carouselContainer');
   const carousel = document.getElementById('cardCarousel');
 
   if (!container || !carousel) return;
 
-  // Amber
   // Cache the original cards
-  const cards = Array.from(carousel.children);
-  const cardCount = cards.length;
+  const originalCards = Array.from(carousel.children);
 
   // Duplicate cards to enable a seamless connected loop
   originalCards.forEach((card) => {
     const cloneAfter = card.cloneNode(true);
     carousel.appendChild(cloneAfter);
-    
+
     const cloneBefore = card.cloneNode(true);
     carousel.insertBefore(cloneBefore, carousel.firstChild);
   });
 
-
+  // Map mouse scroll wheel to horizontal scrolling
   container.addEventListener('wheel', (e) => {
     e.preventDefault();
     container.scrollLeft += e.deltaY;
   }, { passive: false });
-
-  // Amber
-  // Handle smooth silent resetting using precise single-card widths (260px width minus 50px negative margin overlap)
-  const singleCardScrollWidth = 210; 
 
   function checkLoop() {
     const setWidth = carousel.scrollWidth / 3;

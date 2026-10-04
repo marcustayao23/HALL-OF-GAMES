@@ -81,32 +81,65 @@ it in your own words.
 
 
 ### Written by @marcustayao23
+### My own work
+
+- **File: index.html, styles.css**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/8be09c3bd8d51d553f021c227b274ac17b8b2c04**
+- **What it does and why we kept it: I worked on the initial wireframe and basic layout of the website. I created the main structure of the page, including the navigation, main sections, and the basic arrangement of the website content. I built the layout this way so the website would follow our planned wireframe and have a clear structure before adding more features. The commit may show another group member's GitHub account because we were working at their house and their account was logged in on the computer. However, I was the one who wrote the initial layout code.**
+
 ### The AI-written part I understand best
 
-- **File:**
-- **Commit:**
+- **File: index.html, styles.css**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/8be09c3bd8d51d553f021c227b274ac17b8b2c04**
 - **What it does and why we kept it:**
-  
+
+- **File: index.html**
+- **Commit:**
+- **What it does and why we kept it: For the initial version, we asked Gemini AI to convert our Hall of Games wireframe into a website. It generated HTML and CSS for the page layout. I understand that the HTML provides the structure of the page, such as the navigation and content sections, while the CSS controls how those elements look and are positioned. We did not keep the AI-generated website as our final design because it was too different from the design we wanted. We used the suggestions as a reference, then changed and rebuilt the layout based on our own wireframe and project requirements. This helped me understand how the HTML structure and CSS styling work together to create the website.**
+
 
 ### Written by @karlllz
-### The AI-written part I understand best
+### My own work
+- **File: browse.html, style.css**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/2993f77ba68332ca2b3399e69dc82a4bb329b6a4**
+- **What it does and why we kept it: In this commit, I put together the main Browse page content with game pictures, titles, tags, and details. The layout is set up so the text and images sit side-by-side cleanly and can scroll down as more games get added. We kept this because it makes the game details look organized and allows us to list 15+ games without breaking anything. I get how it works since the HTML handles the structure for text and images, while basic CSS flexbox keeps everything aligned and scrollable.**
 
-- **File:**
-- **Commit:**
-- **What it does and why we kept it:**
-  
+- **File: browse.html, style.css**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/7a4cf1936230864ccfcb1ad91661dfac1a193571**
+- **What it does and why we kept it: In this commit, I created the scrollable game cards on the homepage. The JavaScript handles its scrolling functionality while the CSS organizes them in their containers. For the Browse page, I used index.html as a reference and kept the same format to build a new page content. We kept this because it gives us a clean, working layout across both pages that makes browsing games easy. I understand how it works because the script listens for user scrolls while the CSS keeps the cards lined up nicely inside their containers.**
+
+### The AI-written part I understand best
+- **File: browse.html, style.css**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/2993f77ba68332ca2b3399e69dc82a4bb329b6a4**
+- **What it does and why we kept it: This commit sets up the content for the Browse page by placing game images alongside their titles, tags, and descriptions. The CSS keeps the layout neat and allows the page to scroll down as we add more games. We kept this because it displays all game details clearly and lets us add 15+ games without breaking the page layout. I understand how it works because the HTML holds the text and image sections, while simple CSS flex styling keeps everything side-by-side and scrollable.**
 
 ### Written by @Amber55666
+### My own work
+
+- **File: index.html**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/368d545115588afacb1ae972834937fa7d8dd16b**
+- **What it does and why we kept it: I added image cards to the main page for the “Top 10 Games” section, and made it so when you hover over a categories, the game’s genre pops up. I also added the main banner photo on the homepage to make it look less empty.**
+
 ### The AI-written part I understand best
 
-- **File:**
-- **Commit:**
-- **What it does and why we kept it:**
+- **File: styles.css**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/368d545115588afacb1ae972834937fa7d8dd16b**
+- **What it does and why we kept it: The AI suggested using :hover with opacity and transition to reveal the genre label on hover. I understood that it works by layering a text element on top of the image and making it fade in when you hover. We kept it because it adds a clean, interactive touch without needing JavaScript.**
+
+- **File: script.js**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/368d545115588afacb1ae972834937fa7d8dd16b**
+- **What it does and why we kept it: The AI helped implement the infinite horizontal scrolling logic for the card carousel. I understand that it works by cloning a small buffer of edge cards on both ends to create a seamless loop, using precise pixel math (singleCardScrollWidth) that matches our CSS negative card margins, and silently resetting the scroll position when the user hits the boundary so the carousel loops infinitely without any visual stutter or overlapping duplication glitches.**
   
 
 ### Written by  @blaizemt25
+### My own work
+
+- **File: index.html, script.js, styles.css**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/ab40e798f3f7c02edfca856e1ae08c21c2796f5c**
+- **What it does and why we kept it: In index.html, I set up an accessible toggle link using ARIA attributes (aria-controls, aria-expanded) connected to a hidden #searchPanel container containing a labeled search input. I then  wrote the JavaScript logic that attaches a click listener to the search link to toggle the search panel's visibility and update its aria-expanded attribute.**
+
 ### The AI-written part I understand best
 
-- **File:**
-- **Commit:**
-- **What it does and why we kept it:**
+- **File: styles.css**
+- **Commit: https://github.com/marcustayao23/HALL-OF-GAMES/commit/ab40e798f3f7c02edfca856e1ae08c21c2796f5c**
+- **What it does and why we kept it: The floating layout rules and interactive focus state styling for the .game-search overlay and its form controls. It positions .game-search as an absolute floating dropdown directly beneath its parent element using grid layout and responsive sizing, while styling the inner label and full-width text input. We kept it because it creates a polished, dark-themed search interface that safely overlays other content (z-index: 1001), adapts seamlessly to smaller viewports, and ensures strong keyboard accessibility through custom high-contrast focus rings (:focus-visible).**

@@ -10,7 +10,8 @@ https://marcustayao23.github.io/HALL-OF-GAMES/
 
 ## Files
 
-- `index.html` - the page.
+- `index.html` - the main page.
+- `browse.html` - the browse page.
 - `style.css` - the styles.
 - `script.js` - the JavaScript.
 - `.nojekyll` - tells GitHub Pages to serve the files as-is.
