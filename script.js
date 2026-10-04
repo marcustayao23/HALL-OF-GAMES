@@ -1,26 +1,4 @@
-// Wait for DOM content to load
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("Final project page loaded.");
-
-  const searchLink = document.querySelector('.nav-right a[href="#search"]');
-  const searchPanel = document.getElementById('searchPanel');
-  const searchInput = document.getElementById('search');
-
-  if (searchLink && searchPanel && searchInput) {
-    searchLink.addEventListener('click', (event) => {
-      event.preventDefault();
-      const isOpen = !searchPanel.hidden;
-      searchPanel.hidden = isOpen;
-      searchLink.setAttribute('aria-expanded', String(!isOpen));
-
-      if (isOpen) {
-        searchLink.focus();
-      } else {
-        searchInput.focus();
-      }
-    });
-  }
-
   const container = document.getElementById('carouselContainer');
   const carousel = document.getElementById('cardCarousel');
 
@@ -28,59 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const originalCards = Array.from(carousel.children);
 
-  // Duplicate cards BEFORE and AFTER to create a seamless connected loop
+  // Duplicate cards to enable a seamless connected loop
   originalCards.forEach((card) => {
     const cloneAfter = card.cloneNode(true);
-    carousel.appendChild(cloneAfter); // Appends to end (1 to 15)
+    carousel.appendChild(cloneAfter);
     
     const cloneBefore = card.cloneNode(true);
-    carousel.insertBefore(cloneBefore, carousel.firstChild); // Prepends to front (15 to 1)
+    carousel.insertBefore(cloneBefore, carousel.firstChild);
   });
 
-  const allCards = Array.from(carousel.children);
-
-  // Map vertical mouse wheel scroll to horizontal movement
+  // Map mouse scroll wheel to horizontal scrolling
   container.addEventListener('wheel', (e) => {
     e.preventDefault();
     container.scrollLeft += e.deltaY;
   }, { passive: false });
 
-  function updateCarousel() {
-    const containerCenter = container.getBoundingClientRect().left + container.offsetWidth / 2;
+  function checkLoop() {
     const setWidth = carousel.scrollWidth / 3;
 
-    // Infinite looping boundary checks
+    // Infinite loop reset points
     if (container.scrollLeft >= setWidth * 2) {
       container.scrollLeft -= setWidth;
     } else if (container.scrollLeft <= setWidth * 0.5) {
       container.scrollLeft += setWidth;
     }
-
-    // Dynamic 3D cover-flow scaling and rotation relative to center
-    allCards.forEach((card) => {
-      const cardRect = card.getBoundingClientRect();
-      const cardCenter = cardRect.left + cardRect.width / 2;
-      const distanceFromCenter = cardCenter - containerCenter;
-
-      const maxDistance = 450;
-      const normalizedDist = Math.max(-1, Math.min(1, distanceFromCenter / maxDistance));
-      
-      const scale = 1.15 - Math.abs(normalizedDist) * 0.35;
-      const rotateY = normalizedDist * -25;
-      const opacity = 1 - Math.abs(normalizedDist) * 0.45;
-      const zIndex = Math.round(100 - Math.abs(normalizedDist) * 100);
-
-      card.style.transform = `scale(${scale}) rotateY(${rotateY}deg)`;
-      card.style.opacity = opacity;
-      card.style.zIndex = zIndex;
-    });
   }
 
-  container.addEventListener('scroll', updateCarousel);
-  window.addEventListener('resize', updateCarousel);
+  container.addEventListener('scroll', checkLoop);
 
-  // Set initial scroll position to the center set of cards
+  // Set initial scroll position to center
   const setWidth = carousel.scrollWidth / 3;
   container.scrollLeft = setWidth;
-  updateCarousel();
 });
