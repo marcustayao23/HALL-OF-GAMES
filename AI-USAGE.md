@@ -26,7 +26,8 @@ At least six entries. One per real use. Every entry needs a commit link.
 
 ### 2026-09-29 - Adding the Search Bar
 
-- **Tool:**Gemini Ai
+![Static Badge](https://img.shields.io/badge/Copilot-black?style=flat&link=https%3A%2F%2Fgithub.com%2Ffeatures%2Fcopilot)
+
 - **What I asked for:**Help us plan the game image section for the main page, including placeholders for the game covers and a horizontal sliding layout.
 - **What it gave back:** AI provided suggestions for displaying game images in a horizontal layout where the images can slide from left to right or right to left.
 - **What I kept, what I changed, and why:** We used the suggestions as a reference and adjusted the layout to match our website design. Placeholder images were added to the main page while the actual game cover images are still being prepared.
