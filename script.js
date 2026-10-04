@@ -4,15 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!container || !carousel) return;
 
-  const originalCards = Array.from(carousel.children);
+  // Amber
+  // Cache the original cards
+  const cards = Array.from(carousel.children);
+  const cardCount = cards.length;
 
-  // Duplicate cards to enable a seamless connected loop
-  originalCards.forEach((card) => {
-    const cloneAfter = card.cloneNode(true);
-    carousel.appendChild(cloneAfter);
-    
-    const cloneBefore = card.cloneNode(true);
-    carousel.insertBefore(cloneBefore, carousel.firstChild);
+  // Amber
+  // Clone a few cards to both ends to create a seamless buffer without massive duplication
+  cards.slice(0, 3).forEach(card => {
+    carousel.appendChild(card.cloneNode(true));
+  });
+  cards.slice(-3).forEach(card => {
+    carousel.insertBefore(card.cloneNode(true), carousel.firstChild);
   });
 
   // Map mouse scroll wheel to horizontal scrolling
@@ -21,20 +24,27 @@ document.addEventListener('DOMContentLoaded', () => {
     container.scrollLeft += e.deltaY;
   }, { passive: false });
 
-  function checkLoop() {
-    const setWidth = carousel.scrollWidth / 3;
+  // Amber
+  // Handle smooth silent resetting using precise single-card widths (260px width minus 50px negative margin overlap)
+  const singleCardScrollWidth = 210; 
 
-    // Infinite loop reset points
-    if (container.scrollLeft >= setWidth * 2) {
-      container.scrollLeft -= setWidth;
-    } else if (container.scrollLeft <= setWidth * 0.5) {
-      container.scrollLeft += setWidth;
+  function checkLoop() {
+    const maxScroll = cardCount * singleCardScrollWidth;
+
+    // Amber
+    // If scrolled past the end, snap back silently to the start
+    if (container.scrollLeft >= maxScroll * 2) {
+      container.scrollLeft -= maxScroll;
+    } 
+    // Amber
+    // If scrolled past the beginning backwards, snap forward silently to the correct spot
+    else if (container.scrollLeft <= 5) {
+      container.scrollLeft += maxScroll;
     }
   }
 
   container.addEventListener('scroll', checkLoop);
 
-  // Set initial scroll position to center
-  const setWidth = carousel.scrollWidth / 3;
-  container.scrollLeft = setWidth;
+  // Set initial scroll position past the prepended clones
+  container.scrollLeft = cardCount * singleCardScrollWidth;
 });
