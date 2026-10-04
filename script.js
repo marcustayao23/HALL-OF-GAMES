@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("Final project page loaded.");
+
+
+  const searchLink = document.querySelector('.nav-right a[href="#search"]');
+  const searchPanel = document.getElementById('searchPanel');
+  const searchInput = document.getElementById('search');
+
+  if (searchLink && searchPanel && searchInput) {
+    searchLink.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const isOpen = !searchPanel.hidden;
+      searchPanel.hidden = isOpen;
+      searchLink.setAttribute('aria-expanded', String(!isOpen));
+
+      if (isOpen) {
+        searchLink.focus();
+      } else {
+        searchInput.focus();
+      }
+    });
+  }
+
+
   const container = document.getElementById('carouselContainer');
   const carousel = document.getElementById('cardCarousel');
 
@@ -9,16 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = Array.from(carousel.children);
   const cardCount = cards.length;
 
-  // Amber
-  // Clone a few cards to both ends to create a seamless buffer without massive duplication
-  cards.slice(0, 3).forEach(card => {
-    carousel.appendChild(card.cloneNode(true));
-  });
-  cards.slice(-3).forEach(card => {
-    carousel.insertBefore(card.cloneNode(true), carousel.firstChild);
+  // Duplicate cards to enable a seamless connected loop
+  originalCards.forEach((card) => {
+    const cloneAfter = card.cloneNode(true);
+    carousel.appendChild(cloneAfter);
+    
+    const cloneBefore = card.cloneNode(true);
+    carousel.insertBefore(cloneBefore, carousel.firstChild);
   });
 
-  // Map mouse scroll wheel to horizontal scrolling
+
   container.addEventListener('wheel', (e) => {
     e.preventDefault();
     container.scrollLeft += e.deltaY;
@@ -29,22 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const singleCardScrollWidth = 210; 
 
   function checkLoop() {
-    const maxScroll = cardCount * singleCardScrollWidth;
+    const setWidth = carousel.scrollWidth / 3;
 
-    // Amber
-    // If scrolled past the end, snap back silently to the start
-    if (container.scrollLeft >= maxScroll * 2) {
-      container.scrollLeft -= maxScroll;
-    } 
-    // Amber
-    // If scrolled past the beginning backwards, snap forward silently to the correct spot
-    else if (container.scrollLeft <= 5) {
-      container.scrollLeft += maxScroll;
+    // Infinite loop reset points
+    if (container.scrollLeft >= setWidth * 2) {
+      container.scrollLeft -= setWidth;
+    } else if (container.scrollLeft <= setWidth * 0.5) {
+      container.scrollLeft += setWidth;
     }
   }
 
   container.addEventListener('scroll', checkLoop);
 
-  // Set initial scroll position past the prepended clones
-  container.scrollLeft = cardCount * singleCardScrollWidth;
+  // Set initial scroll position to center
+  const setWidth = carousel.scrollWidth / 3;
+  container.scrollLeft = setWidth;
 });
