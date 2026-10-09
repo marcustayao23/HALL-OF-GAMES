@@ -120,8 +120,6 @@ footer {
   color: #38bdf8;
 }
 
-/* --- Dropdown Hover Menu Code --- */
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -168,7 +166,6 @@ footer {
   display: block;
 }
 
-/* Gallery Container */
 .gallery-section {
   text-align: center;
   padding: 2rem 0;
@@ -186,7 +183,6 @@ footer {
   display: none !important;
 }
 
-/* 3D Carousel Container */
 .card-carousel {
   display: flex;
   align-items: center;
@@ -195,7 +191,6 @@ footer {
   padding: 0; 
 }
 
-/* Individual Card Styling */
 .card {
   position: relative;
   display: block;
@@ -214,7 +209,6 @@ footer {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
-/* Placeholder box */
 .card-placeholder {
   position: absolute;
   inset: 0;
@@ -223,27 +217,21 @@ footer {
   justify-content: center;
   color: #9ca3af;
   font-weight: bold;
-  /* Amber */
   z-index: 1;
 }
 
-/* Image behavior inside card */
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: relative;
-  /* Amber */
   z-index: 2;
 }
 
-/* Amber */
-/* Hide placeholder automatically if image is loaded successfully */
 .card img:not([src=""]) ~ .card-placeholder {
   display: none;
 }
 
-/* Hover & Active State Interaction */
 .card:hover,
 .card.active,
 .card:focus-visible {
@@ -281,7 +269,6 @@ footer {
   display: none;
 }
 
-/* Browse Page Container */
 .browse-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -368,7 +355,6 @@ footer {
 }
 
 
-/* Message at the bottom of the website */
 .site-message {
   text-align: center;
   padding: 1.5rem;
@@ -461,7 +447,6 @@ footer {
   line-height: 1;
 }
 
-/* Message displayed when no games match */
 .no-results {
   text-align: center;
   padding: 2rem 1rem;

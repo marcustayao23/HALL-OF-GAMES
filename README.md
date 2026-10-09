@@ -14,6 +14,8 @@ https://marcustayao23.github.io/HALL-OF-GAMES/
 - `browse.html` - the browse page.
 - `style.css` - the styles.
 - `script.js` - the JavaScript.
+- `Browse Images` - the images for the browse tab.
+- `Homepage Images` - the images for the homepage.
 - `.nojekyll` - tells GitHub Pages to serve the files as-is.
 
 ## AI use

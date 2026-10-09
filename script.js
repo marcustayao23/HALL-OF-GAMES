@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Hall of Games loaded.");
 
-  // Help dialog
   const helpButton = document.getElementById('helpButton');
   const helpDialog = document.getElementById('helpDialog');
   const helpClose = document.getElementById('helpClose');
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     helpClose.addEventListener('click', () => helpDialog.close());
   }
 
-  // Search panel
   const searchLink = document.querySelector('.nav-right a[href="#search"]');
   const searchPanel = document.getElementById('searchPanel');
   const searchInput = document.getElementById('search');
@@ -32,8 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // On Home, pressing Enter opens Browse with the search.
-    // On Browse, the results update as the user types.
     searchInput.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' && !document.querySelector('.browse-container')) {
         event.preventDefault();
@@ -46,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Browse page: category and search filtering
   const browseContainer = document.querySelector('.browse-container');
 
   if (browseContainer) {
@@ -66,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
       searchInput.value = initialSearch;
     }
 
-    // Create a message for when no games match.
     const noResults = document.createElement('p');
     noResults.className = 'no-results';
     noResults.textContent =
@@ -140,11 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
       searchInput.addEventListener('input', filterGames);
     }
 
-    // Run filtering immediately when Browse opens with a category/search URL.
     filterGames();
   }
 
-  // Home page: horizontal game carousel
   const container = document.getElementById('carouselContainer');
   const carousel = document.getElementById('cardCarousel');
 
@@ -155,13 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const originalCards = Array.from(carousel.children);
 
-  // Duplicate the original cards for the continuous scrolling effect.
   originalCards.forEach((card) => {
     carousel.appendChild(card.cloneNode(true));
     carousel.insertBefore(card.cloneNode(true), carousel.firstChild);
   });
 
-  // Convert mouse-wheel movement into horizontal scrolling.
   container.addEventListener('wheel', (event) => {
     event.preventDefault();
     container.scrollLeft += event.deltaY;
@@ -229,6 +219,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   container.addEventListener('scroll', checkLoop);
 
-  // Start in the middle set of duplicated cards.
   container.scrollLeft = carousel.scrollWidth / 3;
 });
