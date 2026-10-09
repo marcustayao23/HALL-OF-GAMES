@@ -347,3 +347,31 @@ footer {
     text-align: center;
   }
 }
+
+
+/* Message at the bottom of the website */
+.site-message {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #2a0e33;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+/* Message displayed when no games match */
+.no-results {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.gallery-description {
+  font-size: 1.1rem;
+  color: #e2d5f0;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1rem;
+  line-height: 1.7;
+  text-align: center;
+}
