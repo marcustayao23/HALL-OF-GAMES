@@ -1,4 +1,4 @@
-### **HALL OF GAMES
+### **HALL OF GAMES**
 
 HALL OF GAMES is a game browsing website that allows users to browse a list of games and search for games they are interested in. The website is designed to make browsing games simple and easy.
 
