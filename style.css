@@ -198,6 +198,7 @@ footer {
 /* Individual Card Styling */
 .card {
   position: relative;
+  display: block;
   width: 260px;
   height: 440px;
   flex-shrink: 0;
@@ -207,6 +208,8 @@ footer {
   overflow: hidden;
   margin: 0 -25px; 
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
   transition: transform 0.15s ease-out, opacity 0.15s ease-out;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
@@ -242,12 +245,18 @@ footer {
 
 /* Hover & Active State Interaction */
 .card:hover,
-.card.active {
+.card.active,
+.card:focus-visible {
   transform: scale(1.18) translateY(-15px);
   opacity: 1;
   z-index: 10;
   border-color: transparent;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.card:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 4px;
 }
 
 .carousel-container {
@@ -256,6 +265,16 @@ footer {
   padding: 3rem 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.carousel-container:active {
+  cursor: grabbing;
+}
+
+.carousel-container:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: -3px;
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -356,6 +375,90 @@ footer {
   background-color: #2a0e33;
   color: #e2e8f0;
   font-size: 1rem;
+}
+
+.site-message p {
+  margin-bottom: 0.75rem;
+}
+
+.help-button,
+.help-close {
+  border: 1px solid #a78bfa;
+  border-radius: 999px;
+  background: #3b1e49;
+  color: #ffffff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.help-button {
+  padding: 0.45rem 1rem;
+}
+
+.help-button span {
+  display: inline-grid;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.25rem;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.help-button:hover,
+.help-close:hover {
+  background: #5b4061;
+}
+
+.help-button:focus-visible,
+.help-close:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.help-dialog {
+  width: min(560px, calc(100vw - 2rem));
+  max-height: min(80vh, 600px);
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid #a78bfa;
+  border-radius: 12px;
+  background: #2a0e33;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.help-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.help-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.help-dialog-header h2 {
+  margin: 0;
+}
+
+.help-dialog ul {
+  padding-left: 1.25rem;
+}
+
+.help-dialog li + li {
+  margin-top: 0.75rem;
+}
+
+.help-close {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 /* Message displayed when no games match */

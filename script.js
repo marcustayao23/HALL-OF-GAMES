@@ -2,6 +2,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Hall of Games loaded.");
 
+  // Help dialog
+  const helpButton = document.getElementById('helpButton');
+  const helpDialog = document.getElementById('helpDialog');
+  const helpClose = document.getElementById('helpClose');
+
+  if (helpButton && helpDialog && helpClose) {
+    helpButton.addEventListener('click', () => helpDialog.showModal());
+    helpClose.addEventListener('click', () => helpDialog.close());
+  }
+
   // Search panel
   const searchLink = document.querySelector('.nav-right a[href="#search"]');
   const searchPanel = document.getElementById('searchPanel');
@@ -47,6 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     let selectedCategory = params.get('category') || '';
     const initialSearch = params.get('search') || '';
+    const selectedGame = (params.get('game') || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
 
     if (searchInput) {
       searchInput.value = initialSearch;
@@ -80,9 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
           : '';
 
         const gameText = card.textContent.toLowerCase();
+        const normalizedTitle = gameTitle
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-|-$/g, '');
 
         const matchesSearch =
           !searchTerm || gameText.includes(searchTerm);
+
+        const matchesSelectedGame =
+          !selectedGame || normalizedTitle === selectedGame;
 
         let matchesCategory = true;
 
@@ -104,7 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
           );
         }
 
-        const shouldShow = matchesSearch && matchesCategory;
+        const shouldShow =
+          matchesSearch && matchesCategory && matchesSelectedGame;
         card.hidden = !shouldShow;
 
         if (shouldShow) {
@@ -129,6 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!container || !carousel) return;
 
+  container.tabIndex = 0;
+  container.setAttribute('aria-label', 'Game carousel');
+
   const originalCards = Array.from(carousel.children);
 
   // Duplicate the original cards for the continuous scrolling effect.
@@ -142,6 +166,56 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     container.scrollLeft += event.deltaY;
   }, { passive: false });
+
+  container.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      container.scrollLeft += event.key === 'ArrowRight' ? 260 : -260;
+    }
+  });
+
+  let pointerStartX = 0;
+  let scrollStartX = 0;
+  let isPointerDown = false;
+  let isDragging = false;
+
+  container.addEventListener('pointerdown', (event) => {
+    if (event.pointerType !== 'mouse' || event.button !== 0) return;
+
+    isPointerDown = true;
+    isDragging = false;
+    pointerStartX = event.clientX;
+    scrollStartX = container.scrollLeft;
+  });
+
+  container.addEventListener('pointermove', (event) => {
+    if (!isPointerDown) return;
+
+    const distance = event.clientX - pointerStartX;
+
+    if (!isDragging && Math.abs(distance) > 5) {
+      isDragging = true;
+    }
+
+    if (isDragging) {
+      event.preventDefault();
+      container.scrollLeft = scrollStartX - distance;
+    }
+  });
+
+  ['pointerup', 'pointercancel', 'pointerleave'].forEach((eventName) => {
+    container.addEventListener(eventName, () => {
+      isPointerDown = false;
+    });
+  });
+
+  container.addEventListener('click', (event) => {
+    if (!isDragging) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    isDragging = false;
+  }, true);
 
   function checkLoop() {
     const setWidth = carousel.scrollWidth / 3;
