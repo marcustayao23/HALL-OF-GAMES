@@ -14,11 +14,11 @@ At least six entries. One per real use. Every entry needs a commit link.
 
 ### 2026-08-25  Turning Wireframe Into Website
 
-![Static Badge](https://img.shields.io/badge/Gemini-blueviolet?style=flat&cacheSeconds=https%3A%2F%2Fgemini.google.com%2Fapp%2F512599d0fcb004ed%3Fis_sa%3D1%26is_sa%3D1%26android-min-version%3D301356232%26ios-min-version%3D322.0%26campaign_id%3Dbkws%26utm_source%3Dsem%26utm_medium%3Dpaid-media%26utm_campaign%3Dbkws%26pt%3D9008%26mt%3D8%26ct%3Dp-growth-sem-bkws%26gclsrc%3Daw.ds%26gad_source%3D1%26gad_campaignid%3D22427904477%26gbraid%3D0AAAAApk5Bhm5vaCfOkBBIKFkIcaVpNl3h%26gclid%3DEAIaIQobChMI39ng2sGglwMVwZe5BR02HgKLEAAYASAAEgIOVfD_BwE&link=https%3A%2F%2Fgemini.google.com%2Fapp%2F512599d0fcb004ed%3Fis_sa%3D1%26is_sa%3D1%26android-min-version%3D301356232%26ios-min-version%3D322.0%26campaign_id%3Dbkws%26utm_source%3Dsem%26utm_medium%3Dpaid-media%26utm_campaign%3Dbkws%26pt%3D9008%26mt%3D8%26ct%3Dp-growth-sem-bkws%26gclsrc%3Daw.ds%26gad_source%3D1%26gad_campaignid%3D22427904477%26gbraid%3D0AAAAApk5Bhm5vaCfOkBBIKFkIcaVpNl3h%26gclid%3DEAIaIQobChMI39ng2sGglwMVwZe5BR02HgKLEAAYASAAEgIOVfD_BwE)
+![Static Badge](https://img.shields.io/badge/Google_Gemini-blueviolet?style=for-the-badge&logo=Google%20Gemini&label=AI%20TOOL&link=https%3A%2F%2Fgemini.google.com%2Fapp)
 
 
 
-- **What I asked for:**Convert Hall of Games Wireframe into Website
+- **What I asked for:** Convert Hall of Games Wireframe into Website
 - **What it gave back:** A polished, modern-looking website layout with clean HTML and CSS that looked like a finished, production-ready web page at first glance
 - **What I kept, what I changed, and why:**
  As of  Week 1, we did not keep any of the AI-generated website code because the result was too far from our desired design and concept. We revised the wireframe and rebuilt the website from scratch, with the current HTML and CSS being written and developed by our group based on our own design and plans. Since the project is still in its early stage, JavaScript functionality has not yet been implemented.
@@ -26,20 +26,49 @@ At least six entries. One per real use. Every entry needs a commit link.
 
 ### 2026-09-29 - Adding the Search Bar
 
-![Static Badge](https://img.shields.io/badge/Copilot-black?style=flat&link=https%3A%2F%2Fgithub.com%2Ffeatures%2Fcopilot)
+![Static Badge](https://img.shields.io/badge/Github_Copilot-black?style=for-the-badge&logo=Github%20Copilot&label=AI%20TOOL&link=https%3A%2F%2Fgithub.com%2Ffeatures%2Fcopilot)
 
-- **What I asked for:**Help us plan the game image section for the main page, including placeholders for the game covers and a horizontal sliding layout.
+
+- **What I asked for:** Help us plan the game image section for the main page, including placeholders for the game covers and a horizontal sliding layout.
 - **What it gave back:** AI provided suggestions for displaying game images in a horizontal layout where the images can slide from left to right or right to left.
 - **What I kept, what I changed, and why:** We used the suggestions as a reference and adjusted the layout to match our website design. Placeholder images were added to the main page while the actual game cover images are still being prepared.
 - **Commit:** https://github.com/marcustayao23/HALL-OF-GAMES/commit/7a4cf1936230864ccfcb1ad91661dfac1a193571
 
 ### 2026-09-29 — Updating the Project Documentation
 
-![Static Badge](https://img.shields.io/badge/Gemini-blueviolet?style=flat&cacheSeconds=https%3A%2F%2Fgemini.google.com%2Fapp%2F512599d0fcb004ed%3Fis_sa%3D1%26is_sa%3D1%26android-min-version%3D301356232%26ios-min-version%3D322.0%26campaign_id%3Dbkws%26utm_source%3Dsem%26utm_medium%3Dpaid-media%26utm_campaign%3Dbkws%26pt%3D9008%26mt%3D8%26ct%3Dp-growth-sem-bkws%26gclsrc%3Daw.ds%26gad_source%3D1%26gad_campaignid%3D22427904477%26gbraid%3D0AAAAApk5Bhm5vaCfOkBBIKFkIcaVpNl3h%26gclid%3DEAIaIQobChMI39ng2sGglwMVwZe5BR02HgKLEAAYASAAEgIOVfD_BwE&link=https%3A%2F%2Fgemini.google.com%2Fapp%2F512599d0fcb004ed%3Fis_sa%3D1%26is_sa%3D1%26android-min-version%3D301356232%26ios-min-version%3D322.0%26campaign_id%3Dbkws%26utm_source%3Dsem%26utm_medium%3Dpaid-media%26utm_campaign%3Dbkws%26pt%3D9008%26mt%3D8%26ct%3Dp-growth-sem-bkws%26gclsrc%3Daw.ds%26gad_source%3D1%26gad_campaignid%3D22427904477%26gbraid%3D0AAAAApk5Bhm5vaCfOkBBIKFkIcaVpNl3h%26gclid%3DEAIaIQobChMI39ng2sGglwMVwZe5BR02HgKLEAAYASAAEgIOVfD_BwE)
-- **What I asked for:**Help organize and explain the Week 2 changes in the project documentation.
+![Static Badge](https://img.shields.io/badge/Google_Gemini-blueviolet?style=for-the-badge&logo=Google%20Gemini&label=AI%20TOOL&link=https%3A%2F%2Fgemini.google.com%2Fapp)
+
+- **What I asked for:** Help organize and explain the Week 2 changes in the project documentation.
 - **What it gave back:** AI helped structure the documentation for the website's current features, project structure, screenshots, known issues, and next steps.
 - **What I kept, what I changed, and why:** We used the suggestions as a starting point and changed the information to match the actual state of our project. We made sure the documentation did not describe unfinished features as completed.
-- **Commit:** https://github.com/marcustayao23/HALL-OF-GAMES/commit/ab40e798f3f7c02edfca856e1ae08c21c2796f5c 
+- **Commit:** https://github.com/marcustayao23/HALL-OF-GAMES/commit/ab40e798f3f7c02edfca856e1ae08c21c2796f5c
+
+
+### 2026-10-4 — More game items in the browse page
+
+![Static Badge](https://img.shields.io/badge/Google_Gemini-blueviolet?style=for-the-badge&logo=Google%20Gemini&label=AI%20TOOL&link=https%3A%2F%2Fgemini.google.com%2Fapp)
+
+- **What I asked for:** To create additional game items using the same initial container code while ensuring the structure remains well-organized, properly spaced, and neatly aligned. Allow the AI to handle the CSS attributes to maintain the container's layout, prevent structural issues, and ensure all elements are positioned correctly.
+- **What it gave back:** The code generated additional game items using the same initial container structure. It maintained a consistent layout and spacing while allowing the AI to manage the CSS attributes 
+- **What I kept, what I changed, and why:** We allowed the AI to handle the CSS attributes so it can adjust the styling as needed, prevent the container from breaking, and keep all elements neatly positioned. This approach makes the code more organized, easier to maintain, and more efficient when adding new game items.
+- **Commit:** https://github.com/marcustayao23/HALL-OF-GAMES/commit/7a4cf1936230864ccfcb1ad91661dfac1a193571
+  
+### 2026-10-9 — Dynamic Search and Category Filtering for Browse Page
+
+![Static Badge](https://img.shields.io/badge/Google_Gemini-blueviolet?style=for-the-badge&logo=Google%20Gemini&label=AI%20TOOL&link=https%3A%2F%2Fgemini.google.com%2Fapp)
+
+- **What I asked for:** Revise our initial search panel code to make it more flexible, organized, and capable of supporting a growing library of games. The original code relied heavily on hardcoded logic and lacked a complete, consistent system for searching and filtering game items across pages.
+- **What it gave back:**  A revised JavaScript implementation that reads game elements from the page, retrieves search terms and category selections from URL parameters, and dynamically filters game items based on their text and tags. It also introduces a no-results message, updates the search input using the URL, and supports navigation from the home page to the Browse page with the search query preserved.
+- **What I kept, what I changed, and why:** We kept, URL parameter handling and combined search and category filtering because they provide a practical foundation for the search system. 
+- **Commit:** https://github.com/marcustayao23/HALL-OF-GAMES/commit/2efdb95e5a946e5a97156da59d46926eb43fcef8#diff-ed3ee7e0beea2498ff3b8ca85973d122fc6fa3d585d62b5807ec034d0cf076b3
+
+### 2026-10-9 — Automating Functional Image Carousels with Links to the Browse Page
+![Static Badge](https://img.shields.io/badge/Github_Copilot-black?style=for-the-badge&logo=Github%20Copilot&label=AI%20TOOL&link=https%3A%2F%2Fgithub.com%2Ffeatures%2Fcopilot)
+
+- **What I asked for:** To integrate the downloaded and organized images into the remaining game items that had titles and IDs but no pictures. Also to revise the JavaScript code without breaking the scrollable carousel function so that every image in the homepage carousel would be interactive and link to the Browse page, allowing users to view the specific game they selected.
+- **What it gave back:** An updated JavaScript implementation that supports game-specific filtering through URL parameters, allowing the Browse page to display the selected game in isolation.
+- **What I kept, what I changed, and why:** We kept the URL parameter handling and game-title normalization because they help identify the selected game and filter the Browse page accordingly. 
+- **Commit:** https://github.com/marcustayao23/HALL-OF-GAMES/commit/9ed121be7588ed8a520c41ee7bc72b9f471de710#diff-ed3ee7e0beea2498ff3b8ca85973d122fc6fa3d585d62b5807ec034d0cf076b3
 
 
 ## 2. Where the AI got it wrong
